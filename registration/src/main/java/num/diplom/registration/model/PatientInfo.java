@@ -13,6 +13,10 @@ public class PatientInfo implements Entity<PatientInfo> {
     private String education;
     private String profession;
 
+    public PatientInfo(PatientId patientId) {
+        this.patientId = patientId;
+    }
+
     public PatientInfo(
             PatientId patientId,
             String firstName,

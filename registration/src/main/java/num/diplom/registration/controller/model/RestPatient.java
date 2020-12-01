@@ -1,4 +1,4 @@
-package num.diplom.registration.rest.model;
+package num.diplom.registration.controller.model;
 
 public class RestPatient {
     private String id;

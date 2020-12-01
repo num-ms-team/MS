@@ -1,12 +1,12 @@
-package num.diplom.registration.rest;
+package num.diplom.registration.controller;
 
 import num.diplom.base.exception.UseCaseException;
 import num.diplom.base.usecase.filter.DateFilter;
 import num.diplom.base.usecase.filter.Filter;
 import num.diplom.base.usecase.filter.TableFilter;
+import num.diplom.registration.controller.model.RestCount;
+import num.diplom.registration.controller.model.RestPatient;
 import num.diplom.registration.model.PatientId;
-import num.diplom.registration.rest.model.RestCount;
-import num.diplom.registration.rest.model.RestPatient;
 import num.diplom.registration.service.PatientContactService;
 import num.diplom.registration.service.PatientInfoService;
 import num.diplom.registration.service.PatientService;
@@ -23,13 +23,13 @@ import java.util.List;
 
 @RestController
 @RequestMapping("patients")
-public class PatientRestApi {
+public class PatientController {
     private static final String LOCAL_DATE_PATTERN = "MM/d/yyyy";
     private final PatientService patientService;
     private final PatientInfoService patientInfoService;
     private final PatientContactService patientContactService;
 
-    public PatientRestApi(
+    public PatientController(
             PatientService patientService,
             PatientInfoService patientInfoService,
             PatientContactService patientContactService

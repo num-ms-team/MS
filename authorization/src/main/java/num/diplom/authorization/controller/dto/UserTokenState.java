@@ -1,4 +1,4 @@
-package num.diplom.authorization.rest.dto;
+package num.diplom.authorization.controller.dto;
 
 public class UserTokenState {
     private String access_token;

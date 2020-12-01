@@ -1,7 +1,7 @@
-package num.diplom.authorization.rest;
+package num.diplom.authorization.controller;
 
+import num.diplom.authorization.controller.dto.UserTokenState;
 import num.diplom.authorization.dto.UserDto;
-import num.diplom.authorization.rest.dto.UserTokenState;
 import num.diplom.authorization.security.TokenHelper;
 import num.diplom.authorization.service.impl.MSUserDetailsService;
 import org.springframework.context.annotation.Lazy;
@@ -22,14 +22,14 @@ import static num.diplom.base.constant.RestConstants.INVALID_INPUT;
 
 @RestController
 @RequestMapping("aim")
-public class AuthenticationRestApi {
+public class AuthenticationController {
     private final TokenHelper tokenHelper;
     private final MSUserDetailsService userDetailsService;
 
     @Lazy
     private final AuthenticationManager authenticationManager;
 
-    public AuthenticationRestApi(
+    public AuthenticationController(
             TokenHelper tokenHelper,
             AuthenticationManager authenticationManager,
             MSUserDetailsService userDetailsService
